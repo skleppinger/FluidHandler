@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "fluidhandler"
+version = "0.1.0"
+description = ""
+authors = ["skleppinger <s.kleppinger@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+infrareuse = {path = "../InfraReuse", develop = true}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

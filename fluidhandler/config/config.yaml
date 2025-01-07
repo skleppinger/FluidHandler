@@ -1,0 +1,10 @@
+Managers:
+  test_manager: fluidhandler.managers.device_manager:DeviceManager
+
+TestManager:
+  test_component:
+    module: fluidhandler.managers.device_manager:TestComponent
+    enabled: true
+    foo: 1
+    bar: 2
+    baz: 3
