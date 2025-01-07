@@ -3,7 +3,7 @@ Managers:
 
 TestManager:
   test_component:
-    module: fluidhandler.managers.device_manager:TestComponent
+    module: fluidhandler.components.test_device:TestComponent
     enabled: true
     foo: 1
     bar: 2

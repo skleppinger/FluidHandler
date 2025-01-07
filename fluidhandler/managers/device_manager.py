@@ -5,10 +5,11 @@ from infrareuse.components.application_component import (
 from infrareuse.dependency_resolver import DependencyResolver, ResolveByNameAndType
 from typing import Any
 import infrareuse.factory as factory
+import asyncio
 
 
 class DeviceManager(ApplicationComponent):
-    PREFIX = "TestManager"
+    PREFIX = "DeviceManager"
 
     def __init__(
         self,
@@ -19,6 +20,7 @@ class DeviceManager(ApplicationComponent):
         self.resolver = resolver
         self.local_config = self._global_config.get(self.PREFIX, {})
         self.components = self.load_components()
+        self._loop = asyncio.get_event_loop()
 
     def load_components(self) -> list[ApplicationComponent]:
         components = []

@@ -10,7 +10,7 @@ from infrareuse.logging.logging_helpers import (
 )
 
 
-class PassingConfig(Config):
+class TestConfig(Config):
     foo: int
     bar: int
     baz: int
@@ -18,7 +18,7 @@ class PassingConfig(Config):
 
 
 class TestComponent(ConfigurableApplicationComponent):
-    CONFIG = PassingConfig
+    CONFIG = TestConfig
 
     def __init__(
         self, **kwargs: dict[str, Any]
