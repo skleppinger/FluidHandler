@@ -1,11 +1,12 @@
+import asyncio
+from typing import Any
+
+import infrareuse.factory as factory
 from infrareuse.components.application_component import (
     ApplicationComponent,
     ConfigurableApplicationComponent,
 )
 from infrareuse.dependency_resolver import DependencyResolver, ResolveByNameAndType
-from typing import Any
-import infrareuse.factory as factory
-import asyncio
 
 
 class DeviceManager(ApplicationComponent):
